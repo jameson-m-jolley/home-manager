@@ -10,7 +10,7 @@ nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     git
     htop
-    emacs
+    doom-emacs
     steam
     discord
     spotify
@@ -18,7 +18,6 @@ nixpkgs.config.allowUnfree = true;
     prismlauncher
     gcc
   ];
-
 
 
   # Example program configuration (e.g., for Zsh)
