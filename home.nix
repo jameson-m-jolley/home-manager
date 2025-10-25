@@ -22,13 +22,15 @@ nixpkgs.config.allowUnfree = true;
     fd
     gcc
   ];
-  
-
-  home.sessionPath = [
-    # This path assumes the standard Doom installation location ($HOME/.config/emacs)
-    "${home.homeDirectory}/emacs/bin"
-  ];
-
+   programs.zsh = {
+    enable = true; # Ensure Zsh is managed by Home Manager
+    shellAliases = {
+      # This explicitly maps the 'doom' command to its location.
+      # Assuming Doom is installed at the standard XDG location: ~/.config/emacs/bin/doom
+      doom = "${config.xdg.configHome}/emacs/bin/doom";
+    };
+  };
+ 
 
   # Example program configuration (e.g., for Zsh)
   programs.zsh = {
