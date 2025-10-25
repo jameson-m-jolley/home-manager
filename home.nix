@@ -4,6 +4,8 @@
   # Define your user and home directory
   home.username = "jamesonj"; # Make sure this matches your actual username
   home.homeDirectory = "/home/jamesonj";
+  services.emacs.package = pkgs.emacs-unstable;
+  
   nixpkgs.overlays = [
   		   (import (builtins.fetchTarball https://github.com/nix-community/emacs-overlay/archive/master.tar.gz))
 		   ];
