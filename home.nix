@@ -6,7 +6,10 @@
   home.homeDirectory = "/home/jamesonj";
   services.emacs.package = pkgs.emacs-unstable;
   nixpkgs.overlays = [
-  		   (import (builtins.fetchTarball https://github.com/nix-community/emacs-overlay/archive/master.tar.gz))
+  		   (import (builtins.fetchTarball{
+		   	  url = "https://github.com/nix-community/emacs-overlay/archive/master.tar.gz";
+			  sha256 = "1nfy1a7qfy1b353nja90khjc1ra9m2qbhdjaan7qc93cfgqlaj5n";
+		   }))
 		   ];
 		   
 nixpkgs.config.allowUnfree = true;
