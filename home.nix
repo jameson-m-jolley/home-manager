@@ -16,6 +16,8 @@ nixpkgs.config.allowUnfree = true;
     spotify
     protonvpn-gui
     prismlauncher
+    doom
+    gcc
   ];
 
 
