@@ -2,14 +2,19 @@
 
 {
   # Define your user and home directory
-  home.username = jamesonj; # Make sure this matches your actual username
-  home.homeDirectory = /home/jamesonj;
+  home.username = "jamesonj"; # Make sure this matches your actual username
+  home.homeDirectory = "/home/jamesonj";
 
+nixpkgs.config.allowUnfree = true;
   # Install user packages
   home.packages = with pkgs; [
     git
-    vim
     htop
+    emacs
+    steam
+    discord
+    spotify
+    protonvpn-gui
   ];
 
   # Example program configuration (e.g., for Zsh)
