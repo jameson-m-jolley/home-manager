@@ -17,7 +17,7 @@ nixpkgs.config.allowUnfree = true;
     spotify
     protonvpn-gui
   ];
-  
+  programs.steam.enable = true;
 
 
   # Example program configuration (e.g., for Zsh)
