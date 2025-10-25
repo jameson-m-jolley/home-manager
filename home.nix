@@ -26,7 +26,7 @@ nixpkgs.config.allowUnfree = true;
 
   home.sessionPath = [
     # This path assumes the standard Doom installation location ($HOME/.config/emacs)
-    "${config.xdg.configHome}/emacs/bin"
+    "${home.homeDirectory}/emacs/bin"
   ];
 
 
