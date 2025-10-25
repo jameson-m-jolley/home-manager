@@ -16,6 +16,15 @@ nixpkgs.config.allowUnfree = true;
     spotify
     protonvpn-gui
   ];
+  
+  programs.steam = {
+    enable = true;
+    
+    # You may also want to enable the steam-run wrapper
+    # This helps ensure games run with the correct libraries.
+    # enableGameStarter = true;
+  };
+
 
   # Example program configuration (e.g., for Zsh)
   programs.zsh = {
