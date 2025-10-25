@@ -17,7 +17,7 @@ nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     git
     htop
-    pkgs.emacsGcc
+    pkgs.emacs-git
     steam
     discord
     spotify
