@@ -24,7 +24,11 @@ nixpkgs.config.allowUnfree = true;
   ];
   
 
-
+  programs.doom-emacs = {
+    enable = true;
+    # Point this to your configuration files
+    doomPrivateDir = .config/emacs/bin/doom;
+  };
   # Example program configuration (e.g., for Zsh)
   programs.zsh = {
     enable = true;
