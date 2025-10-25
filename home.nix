@@ -12,12 +12,11 @@ nixpkgs.config.allowUnfree = true;
     htop
     emacs
     steam
-    steam-run
     discord
     spotify
     protonvpn-gui
   ];
-  programs.steam.enable = true;
+
 
 
   # Example program configuration (e.g., for Zsh)
