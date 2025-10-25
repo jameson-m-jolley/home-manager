@@ -15,6 +15,7 @@ nixpkgs.config.allowUnfree = true;
     discord
     spotify
     protonvpn-gui
+    atlauncher
   ];
 
 
