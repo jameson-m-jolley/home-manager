@@ -23,6 +23,7 @@ nixpkgs.config.allowUnfree = true;
     gcc
     python3
     gnumake
+    vscode
   ];
 
   # Example program configuration (e.g., for Zsh)
