@@ -21,16 +21,9 @@ nixpkgs.config.allowUnfree = true;
     coreutils # basic GNU utilities
     fd
     gcc
+    python
+    make
   ];
-   programs.zsh = {
-    enable = true; # Ensure Zsh is managed by Home Manager
-    shellAliases = {
-      # This explicitly maps the 'doom' command to its location.
-      # Assuming Doom is installed at the standard XDG location: ~/.config/emacs/bin/doom
-      doom = "${config.xdg.configHome}/emacs/bin/doom";
-    };
-  };
- 
 
   # Example program configuration (e.g., for Zsh)
   programs.zsh = {
