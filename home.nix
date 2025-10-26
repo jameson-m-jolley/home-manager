@@ -21,7 +21,7 @@ nixpkgs.config.allowUnfree = true;
     coreutils # basic GNU utilities
     fd
     gcc
-    python
+    python3
     gnumake
   ];
 
