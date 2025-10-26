@@ -22,7 +22,7 @@ nixpkgs.config.allowUnfree = true;
     fd
     gcc
     python
-    Makefile
+    gnumake
   ];
 
   # Example program configuration (e.g., for Zsh)
