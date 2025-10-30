@@ -21,9 +21,20 @@ nixpkgs.config.allowUnfree = true;
     coreutils # basic GNU utilities
     fd
     gcc
-    python3
     gnumake
     vscode
+    clang-tools
+    neofetch
+
+    (pkgs.python311.withPackages (ps: with ps; [
+      # Example: A CLI tool you want globally
+      black
+      # Example: A library whose binary you want available (less common)
+      # You can even install pip itself this way, though it's often better
+      # to use it in a venv, as shown below.
+      pip
+      jupyterlab
+    ]))
   ];
 
   # Example program configuration (e.g., for Zsh)
