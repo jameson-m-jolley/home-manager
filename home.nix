@@ -22,7 +22,6 @@ nixpkgs.config.allowUnfree = true;
     fd
     gcc
     gnumake
-    vscode
     clang-tools
     neofetch
 
@@ -34,6 +33,9 @@ nixpkgs.config.allowUnfree = true;
       # to use it in a venv, as shown below.
       pip
       jupyterlab
+      pandas
+      matplotlib
+      numpy
     ]))
   ];
 
