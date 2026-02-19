@@ -21,6 +21,7 @@ nixpkgs.config.allowUnfree = true;
     prismlauncher
     coreutils # basic GNU utilities
     fd
+    zig 
     gcc
     gnumake
     clang-tools
