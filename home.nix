@@ -1,14 +1,15 @@
-{ config, pkgs, ... }:
+{ config, pkgs, stdenv, lib, ...}:
 
 {
   # Define your user and home directory
   home.username = "jamesonj"; # Make sure this matches your actual username
   home.homeDirectory = "/home/jamesonj";
 
-		   
 nixpkgs.config.allowUnfree = true;
   # Install user packages
   home.packages = with pkgs; [
+    pkgs.gfortran
+    (pkgs.lib.hiPrio pkgs.gcc) # This makes GCC win the conflict
     git
     htop
     emacs
@@ -24,7 +25,12 @@ nixpkgs.config.allowUnfree = true;
     gnumake
     clang-tools
     neofetch
-
+    ffmpeg
+    #crealityPrint
+    flatpak
+    valgrind
+    openvpn
+    vscode
     (pkgs.python311.withPackages (ps: with ps; [
       # Example: A CLI tool you want globally
       black
@@ -36,8 +42,13 @@ nixpkgs.config.allowUnfree = true;
       pandas
       matplotlib
       numpy
+      manim
     ]))
   ];
+
+#services.flatpak.enable = true;
+#environment.systemPackages = [ pkgs.flatpak-builder ];
+
 
   # Example program configuration (e.g., for Zsh)
   programs.zsh = {
@@ -47,7 +58,16 @@ nixpkgs.config.allowUnfree = true;
       update = "home-manager switch";
     };
   };
-  
+
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-backgroundremoval
+      obs-pipewire-audio-capture
+    ];
+  };
+
   # Ensure the Home Manager environment is active
   home.stateVersion = "25.05"; # Use your current NixOS version
 
