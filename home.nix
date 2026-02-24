@@ -23,6 +23,7 @@ nixpkgs.config.allowUnfree = true;
     fd
     zig 
     gcc
+    sbcl
     gnumake
     clang-tools
     neofetch
