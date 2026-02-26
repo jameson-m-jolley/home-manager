@@ -53,9 +53,9 @@ nixpkgs.config.allowUnfree = true;
       p.aeson # For JSON logic
     ]))
     # Development tools
-    pkgs.haskell-language-server
-    pkgs.cabal-install
-    pkgs.zlib 
+    haskell-language-server
+    cabal-install
+    zlib 
   ];
 
 #services.flatpak.enable = true;
