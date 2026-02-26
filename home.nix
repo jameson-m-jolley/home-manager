@@ -49,6 +49,10 @@ nixpkgs.config.allowUnfree = true;
     zlib 
   ];
 
+  shellHook = ''
+    export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath [ pkgs.openssl pkgs.zlib ]}:$LD_LIBRARY_PATH"
+  '';
+
 #services.flatpak.enable = true;
 #environment.systemPackages = [ pkgs.flatpak-builder ];
 
