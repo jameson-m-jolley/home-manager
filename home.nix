@@ -24,7 +24,10 @@ nixpkgs.config.allowUnfree = true;
     zig 
     gcc
     sbcl
-    gnumake
+    (pkgs.sbcl.withPackages (ps: with ps; [
+      hunchensocket
+      cl-json
+    ])) 
     clang-tools
     neofetch
     ffmpeg
