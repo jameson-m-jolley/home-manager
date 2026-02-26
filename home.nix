@@ -48,11 +48,12 @@ nixpkgs.config.allowUnfree = true;
     openssl
     zlib 
   ];
-
+  
  home.sessionVariables = {
   # This tells Lisp (and everything else) where to find C-libraries
   LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [ pkgs.openssl pkgs.zlib ]}";
 }; 
+
 
 #services.flatpak.enable = true;
 #environment.systemPackages = [ pkgs.flatpak-builder ];
