@@ -23,7 +23,6 @@ nixpkgs.config.allowUnfree = true;
     fd
     zig 
     gcc
-    sbcl
     (pkgs.sbcl.withPackages (ps: with ps; [
       hunchensocket
       cl-json
