@@ -44,17 +44,9 @@ nixpkgs.config.allowUnfree = true;
       numpy
       manim
     ]))
-    # The Haskell Compiler + specific libraries
-    (pkgs.haskellPackages.ghcWithPackages (p: [
-      p.websockets
-      p.warp
-      p.stm
-      p.text
-      p.aeson # For JSON logic
-    ]))
-    # Development tools
-    haskell-language-server
-    cabal-install
+    sbcl
+    lispPackages.quicklisp
+    openssl
     zlib 
   ];
 
