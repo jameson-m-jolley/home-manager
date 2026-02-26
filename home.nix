@@ -44,8 +44,7 @@ nixpkgs.config.allowUnfree = true;
       numpy
       manim
     ]))
-    sbcl
-    quicklisp
+    (sbcl.withPackages (ps: with ps; [ quicklisp ])) 
     openssl
     zlib 
   ];
