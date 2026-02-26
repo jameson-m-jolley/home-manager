@@ -23,10 +23,6 @@ nixpkgs.config.allowUnfree = true;
     fd
     zig 
     gcc
-    (pkgs.sbcl.withPackages (ps: with ps; [
-      hunchensocket
-      cl-json
-    ])) 
     clang-tools
     neofetch
     ffmpeg
@@ -48,6 +44,18 @@ nixpkgs.config.allowUnfree = true;
       numpy
       manim
     ]))
+    # The Haskell Compiler + specific libraries
+    (pkgs.haskellPackages.ghcWithPackages (p: [
+      p.websockets
+      p.warp
+      p.stm
+      p.text
+      p.aeson # For JSON logic
+    ]))
+    # Development tools
+    pkgs.haskell-language-server
+    pkgs.cabal-install
+    pkgs.zlib 
   ];
 
 #services.flatpak.enable = true;
