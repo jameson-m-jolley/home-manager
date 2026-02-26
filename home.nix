@@ -45,7 +45,7 @@ nixpkgs.config.allowUnfree = true;
       manim
     ]))
     sbcl
-    lispPackages.quicklisp
+    quicklisp
     openssl
     zlib 
   ];
