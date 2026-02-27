@@ -51,7 +51,10 @@ nixpkgs.config.allowUnfree = true;
 
 #services.flatpak.enable = true;
 #environment.systemPackages = [ pkgs.flatpak-builder ];
-
+languages.zig = {
+  enable = true;
+  version = "0.15.1";
+};
 
   # Example program configuration (e.g., for Zsh)
   programs.zsh = {
