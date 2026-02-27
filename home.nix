@@ -21,7 +21,7 @@ nixpkgs.config.allowUnfree = true;
     prismlauncher
     coreutils # basic GNU utilities
     fd
-    zig 
+    (zig.override { version = "0.15.1"; })
     gcc
     clang-tools
     neofetch
@@ -51,11 +51,6 @@ nixpkgs.config.allowUnfree = true;
 
 #services.flatpak.enable = true;
 #environment.systemPackages = [ pkgs.flatpak-builder ];
-
-programs.languages.zig = {
-    enable = true;
-    version = "0.15.1";
-  };
 
 
   # Example program configuration (e.g., for Zsh)
