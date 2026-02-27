@@ -22,6 +22,7 @@ nixpkgs.config.allowUnfree = true;
     coreutils # basic GNU utilities
     fd
     (zig.override { version = "0.15.1"; })
+    (zls.override {version = "0.15.1"})
     gcc
     clang-tools
     neofetch
